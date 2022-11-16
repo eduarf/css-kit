@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+.balloon {
+    height: 3rem;
+    width: 3rem;
+    background-color: transparent;
+    border: 5px solid coral;
+    border-radius: 50%;
+    position: relative;
+
+}
+.inside-balloon {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: violet;
+    position: absolute;
+    top: -1rem;
+    animation-name: anim;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    /*
+    50% 0%
+    50% 100%
+    -50% 100%
+    -50% 0%;
+    */
+    transform: translate(50%, 0);
+}
+
+@keyframes anim {
+    
+}
