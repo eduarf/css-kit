@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-size: black;
+    padding: 1.2rem 2.5rem;
+    border: 2px solid black;
+    color: black;
+    position: relative;
+    z-index: 2;
+}
+a::before,
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: all .3s ease-in-out;
+    background-color: royalblue;
+    z-index: -1;
+}
+a:hover {
+    color: white;
+    border: 2px solid royalblue;
+}
+a::before{
+    transform: rotateX(90deg);
+}
+a::after{
+    transform: rotateY(90deg);
+}
+a:hover::before{
+    transform: rotateX(0);
+}
+a:hover::after{
+    transform: rotateY(0);
+}
