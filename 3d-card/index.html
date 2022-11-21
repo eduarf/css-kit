@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.card {
+    position: relative;
+    width: 25rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to left, crimson, midnightblue);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+img {
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 18rem;
+    transition: all .5s ease-in-out; 
+}
+.card:hover img{
+    height: 21rem;
+    left: 70%;
+}
+.content {
+    position: relative;
+    width: 40%;
+    left: 20%;
+    color: white;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.card:hover .content {
+    left: 5%;
+    opacity: 1;
+}
+p {
+    color: bisque;
+}
+    </style>
+  </head>
+  <body>
+
+    <div class="card">
+      <div class="content">
+        <h3>Murray Franklin</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+          repellendus, vitae eveniet porro ipsam odit.
+        </p>
+        <a href="#">more</a>
+      </div>
+      <img src="image.png" alt="">
+    </div>
+
+  </body>
+</html>
