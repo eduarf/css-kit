@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+button {
+    padding: 1.2rem 3rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: black;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+button::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    transition: all .4s ease-in-out;
+}
+button::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 100%;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    transition: all .4s ease-in-out;
+}
+button:hover::after{
+    right: 0;
+}
+button:hover::before{
+    left: 0;
+}
