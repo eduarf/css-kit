@@ -50,7 +50,7 @@ h2, h4 , p {
     position: absolute;
     color: white;
     transform: translateY(-2000%);
-    transition: transform .3s ease-in-out;
+    transition: transform .2s ease-in-out;
 }
 h2 {
     top: 40%;
@@ -65,5 +65,5 @@ h4 {
 p {
     top: 60%;
     background-color: slateblue;
-    transition-delay: .6s;
+    transition-delay: .5s;
 }
