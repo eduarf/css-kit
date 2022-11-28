@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            font-family: sans-serif;
+        }
+        .container{
+            height: 25rem;
+            width: 30rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .container::before{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,0.7);
+            transform: translateX(100%);
+            transition: all .4s ease-in-out;
+        }
+        .container:hover::before{
+            transform: translateX(0);
+        }
+        .container:hover .content{
+            transform: rotate(0) translateY(0);
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .content {
+            position: absolute;
+            transform: rotate(90deg) translateY(600%);
+            transition: all .4s ease-in-out;
+            transition-delay: .4s;
+            color: white;
+        }
+        h2 {
+            margin-bottom: 1rem;
+        }
+        
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <img src="table.jpeg">
+
+        <div class="content">
+            <h2>Css Master</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, amet.</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
