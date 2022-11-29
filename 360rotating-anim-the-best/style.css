@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.rotating-container{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+}
+svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    opacity: .6;
+}
+.outside {
+    height: 15rem;
+    background-color: transparent;
+    width: 15rem;
+    border-radius: 50%;
+    position: relative;
+    animation: anim 15s infinite linear;
+}
+.rotating-container:nth-child(1){
+    background-color: lightblue;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.rotating-container:nth-child(2){
+    background-color: lightgreen;
+    top: 0;
+    left: 0;
+    transform: translate(-110%, 100%);
+}
+.rotating-container:nth-child(3){
+    background-color: lightpink;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+}
+.rotating-container:nth-child(4){
+    background-color: lightseagreen;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 110%);
+}
+.rotating-container:nth-child(5){
+    background-color: lightsalmon;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -110%);
+}
+.rotating-container:nth-child(6){
+    background-color: rgb(95, 143, 206);
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+}
+.rotating-container:nth-child(7){
+    background-color: rgb(127, 84, 214);
+    bottom: 0;
+    right: 0;
+    transform: translate(110%, -110%);
+}
+.rotating-container:nth-child(8){
+    background-color: rgb(74, 214, 181);
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+@keyframes anim {
+    0% {
+        transform: rotate(-360deg);
+    }
+}
