@@ -12,31 +12,29 @@ body {
 .balloon {
     height: 3rem;
     width: 3rem;
-    background-color: transparent;
-    border: 5px solid coral;
+    border: 5px solid green;
     border-radius: 50%;
+}
+.inside-balloon{
+    width: 100%;
+    height: 100%;
     position: relative;
-
+    animation: rotation 6.5s infinite linear;
+    z-index: -1;
 }
-.inside-balloon {
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    background-color: violet;
+.inside-balloon::before{
+    content: '';
+    width: 5rem;
+    height: 5rem;
+    background-color: lightgreen;
     position: absolute;
-    top: -1rem;
-    animation-name: anim;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    /*
-    50% 0%
-    50% 100%
-    -50% 100%
-    -50% 0%;
-    */
-    transform: translate(50%, 0);
-}
-
-@keyframes anim {
+    left: .5rem;
+    top: .5rem;
+    border-radius: 50%;
     
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(-360deg);
+    }
 }
