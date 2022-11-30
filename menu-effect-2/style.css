@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: sans-serif;
+}
+ul {
+    display: flex;
+}
+ul li {
+    padding: 1rem;
+    margin-left: 1rem;
+    list-style: none;
+}
+ul a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: black;
+    padding: .8rem 1.3rem;
+    position: relative;
+}
+
+ul a::before,
+ul a::after{
+    content: '';
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    transition: all .4s ease-in-out;
+}
+ul a::before{
+    border-top: 3px solid royalblue;
+    border-right: 3px solid royalblue;
+    top: 0;
+    right: 0;
+    transform: translate(40%, -40%);
+}
+ul a::after{
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid royalblue;
+    border-left: 3px solid royalblue;
+    transform: translate(-40%, 40%);
+}
+/*  Yanlışlıkla bir efekt buldum ne olduğuna dair bir fikrim yok :D 
+kafa da yormak istemiyorum şimdilik sonra bakarım. böyle kalsın */
+ul a:hover::after,
+ul a:hover::before{
+    transform: rotate(1turn);
+}
+
