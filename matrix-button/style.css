@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: sans-serif;
+}
+a {
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    color: green;
+    position: relative;
+    border: 1px solid green;
+    font-size: 1.6rem;
+    border-radius: 3px;
+    transition: all .3s;
+    overflow: hidden;
+    font-weight: bold;
+}
+a:hover {
+    background-color: black;
+}
+a:hover span {
+    animation: anim 3s infinite linear;
+    opacity: 1;
+}
+span {
+    color: green;
+    font-size: .5rem;
+    position: absolute;
+    transform: translateY(-500%) rotate(90deg);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+}
+span:first-child{
+    right: -38%;
+}
+span:nth-child(2){
+    right: -31%;
+}
+span:nth-child(3){
+    right: -24%;
+}
+span:nth-child(4){
+    right: -18%;
+}
+span:nth-child(5){
+    right: -11%;
+}
+span:nth-child(6){
+    right: -5%;
+}
+span:nth-child(7){
+    left: 13%;
+}
+span:nth-child(8){
+    left: 8%;
+}
+span:nth-child(9){
+    left: 2%;
+}
+span:nth-child(10){
+    left: -3%;
+}
+span:nth-child(11){
+    left: -11%;
+}
+span:nth-child(12){
+    left: -17%;
+}
+span:nth-child(13){
+    left: -22%;
+}
+span:nth-child(14){
+    left: -28%;
+}
+span:nth-child(15){
+    left: -35%;
+}
+span:nth-child(16){
+    left: -40%;
+}
+
+@keyframes anim {
+    0%{
+        transform: translateY(-500%) rotate(90deg);
+    }
+    100%{
+        transform: translateY(150%) rotate(90deg);
+    }
+}
