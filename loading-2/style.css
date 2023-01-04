@@ -16,43 +16,43 @@ body {
 .loading span {
     width: .5rem;
     height: 3rem;
-    margin: 0px 1.5px;
+    margin: 0px 2px;
     background-color: white;
-    animation: loading 0.8s ease-in-out infinite;
+    animation: anim .9s ease-in-out infinite;
 }
 .loading span:nth-child(1){
     background-color: royalblue;
-    animation-delay: .2s;
+    animation-delay: .1s;
 }
 .loading span:nth-child(2){
     background-color: greenyellow;
-    animation-delay: .3s;
+    animation-delay: .2s;
 }
 .loading span:nth-child(3){
     background-color: purple;
-    animation-delay: .4s;
+    animation-delay: .3s;
 }
 .loading span:nth-child(4){
     background-color: gold;
-    animation-delay: .5s;
+    animation-delay: .4s;
 }
 .loading span:nth-child(5){
     background-color: slateblue;
-    animation-delay: .6s;
+    animation-delay: .5s;
 }
 .loading span:nth-child(6){
     background-color: rebeccapurple;
-    animation-delay: .7s;
+    animation-delay: .6s;
 }
 
-@keyframes loading {
+@keyframes anim {
     0%{
         transform: scaleY(0.1);
     }
     35% {
         transform: scaleY(1);
     }
-    60%,100% {
+    70%, 100% {
         transform: scaleY(0.1);
     }
 }
