@@ -9,38 +9,38 @@ body {
     place-items: center;
     background-color: #222;
 }
-.loader {
+.loading {
     width: 4rem;
     display: flex;
 }
-span {
+.loading span {
     width: .5rem;
     height: 3rem;
     margin: 0px 1.5px;
     background-color: white;
     animation: loading 0.8s ease-in-out infinite;
 }
-span:nth-child(1){
+.loading span:nth-child(1){
     background-color: royalblue;
     animation-delay: .2s;
 }
-span:nth-child(2){
+.loading span:nth-child(2){
     background-color: greenyellow;
     animation-delay: .3s;
 }
-span:nth-child(3){
+.loading span:nth-child(3){
     background-color: purple;
     animation-delay: .4s;
 }
-span:nth-child(4){
+.loading span:nth-child(4){
     background-color: gold;
     animation-delay: .5s;
 }
-span:nth-child(5){
+.loading span:nth-child(5){
     background-color: slateblue;
     animation-delay: .6s;
 }
-span:nth-child(6){
+.loading span:nth-child(6){
     background-color: rebeccapurple;
     animation-delay: .7s;
 }
