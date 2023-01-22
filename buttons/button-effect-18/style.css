@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: #000;
+  padding: 1rem 4rem;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+}
+a::before,
+a::after {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  background-color: royalblue;
+  z-index: -1;
+  transition: all 0.4s ease-in-out;
+  transform: scale(1);
+}
+a::before {
+  left: 20%;
+}
+a::after {
+  right: 20%;
+}
+a:hover::before,
+a:hover::after {
+  height: 200%;
+  width: 200%;
+}
