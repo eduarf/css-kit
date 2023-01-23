@@ -7,7 +7,7 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
-    background-color: #222;
+    background-color: #1f1f1f;
 }
 a {
     text-decoration: none;
@@ -19,13 +19,13 @@ a {
 a:hover {
     border: 3px solid rebeccapurple;
     color: rebeccapurple;
-    animation: shake 0.3s linear 1;
+    animation: vibrating 0.3s linear 1;
 }
-@keyframes shake {
-    33% {
+@keyframes vibrating {
+    35% {
         transform: rotate(10deg);
     }
-    66% {
+    70% {
         transform: rotate(-10deg);
     }
     100% {
