@@ -23,12 +23,14 @@ span {
     animation: circle 2s linear infinite;
 }
 span:nth-child(2){
-    animation-delay: 0.7s;
+    animation-delay: 0.5s;
 }
 span:nth-child(3){
-    animation-delay: 1.4s;
+    animation-delay: 1s;
 }
-
+span:nth-child(4){
+    animation-delay: 1.5s;
+}
 @keyframes circle {
     0% {
         top: 0;
@@ -36,26 +38,26 @@ span:nth-child(3){
     }
     12.5% {
         top: 0;
-        left: 50%;
+        left: 60%;
     }
     25% {
         top: 0;
-        left: 50%;
+        left: 60%;
     }
     37.5% {
-        top: 50%;
-        left: 50%;
+        top: 60%;
+        left: 60%;
     }
     50% {
-        top: 50%;
-        left: 50%;
+        top: 60%;
+        left: 60%;
     }
     62.5% {
-        top: 50%;
+        top: 60%;
         left: 0;
     }
     75% {
-        top: 50%;
+        top: 60%;
         left: 0;
     }
     87.5% {
