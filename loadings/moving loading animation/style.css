@@ -7,7 +7,7 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
-    background-color: #3d59ad;
+    background-color: #540b1a;
 }
 .loading {
     height: 10rem;
