@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .card {
+        position: relative;
+        width: 28rem;
+        height: 36rem;
+      }
+      .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: all .5s;
+        clip-path: circle(70.7% at 50% 50%);
+      }
+      img {
+        width: 100%;
+        background-position: center;
+      }
+      .card:hover .img {
+        clip-path: circle(18.2% at 50% 38%);
+      }
+      .content {
+        position: absolute;
+        left: 0;
+        bottom: 3rem;
+        text-align: center;
+      }
+      h2 {
+        text-transform: uppercase;
+      }
+      p {
+        margin-bottom: 1.5rem;
+        font-size: 16px;
+        text-transform: capitalize;
+      }
+      a {
+        display: inline-block;
+        text-decoration: none;
+        background-color: black;
+        color: white;
+        padding: .8rem 2rem;
+        border-radius: 5px;
+        text-transform: capitalize;
+      }
+      h2,
+      p,
+      a{
+        opacity: 0;
+        transition: .3s;
+        transform: translateY(2rem);
+      }
+      .card:hover h2,
+      .card:hover p,
+      .card:hover a{
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: .4s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="img">
+        <img src="h3.jpg" />
+      </div>
+      <div class="content">
+        <h2>title</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut pariatur
+          rem qui tenetur sed odit natus fugiat nisi numquam magnam vero,
+          molestiae asperiores, ratione eaque illum deserunt magni ipsum
+          consequatur.
+        </p>
+        <a href="#">More</a>
+      </div>
+    </div>
+  </body>
+</html>
