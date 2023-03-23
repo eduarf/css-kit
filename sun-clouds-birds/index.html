@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <title>Sun</title>
+    <!-- Gül kasvetli havalar da güzeldir :D -->
+</head>
+<body id="body">
+    
+
+
+    <div id="sky">
+        <div class="theSun">
+            <div class="ray_box">
+                <div class="ray ray1"></div>
+                <div class="ray ray2"></div>
+                <div class="ray ray3"></div>
+                <div class="ray ray4"></div>
+                <div class="ray ray5"></div>
+                <div class="ray ray6"></div>
+                <div class="ray ray7"></div>
+                <div class="ray ray8"></div>
+                <div class="ray ray9"></div>
+                <div class="ray ray10"></div>
+            </div>
+        </div>
+    <!-- 	<div class="cloudwrapperOne">
+            <div class="cloud c1"></div>
+        </div -->
+        <div class="cloudwrapperTwo">
+            <div class="cloud c2"></div>
+        </div>
+        <div class="cloudwrapperThree">
+            <div class="cloud c3"></div>
+        </div>
+    
+    </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script>
+        VANTA.BIRDS({
+          el: "#body",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          backgroundColor: 0xc9ff,
+          speedLimit: 6.00
+        })
+        </script>
+
+
+</body>
+</html>
