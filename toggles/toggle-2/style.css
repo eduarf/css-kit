@@ -33,6 +33,7 @@ body {
 .toggle::before{
     content: '';
     position: absolute;
+    left: .5rem;
     top: .65rem;
     height: 1.7rem;
     width: 1.7rem;
@@ -40,9 +41,6 @@ body {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: all .4s ease-in-out;
-}
-.toggle::before {
-    left: .5rem;
 }
 .toggle:checked::before {
     left: 65%;
