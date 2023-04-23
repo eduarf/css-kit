@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: rgb(215, 215, 215);
+        }
+        html {
+            font-size: 62.5%;
+        }
+      .loading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .loading__container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 6rem;
+        height: 6rem;
+      }
+
+      .loading__square {
+        width: 2rem;
+        height: 2rem;
+        margin: .5rem;
+        background-color: #2dad44;
+        animation: bounce 1.5s ease-in-out infinite;
+      }
+
+      .loading__square--1 {
+        animation-delay: 0ms;
+      }
+
+      .loading__square--2 {
+        animation-delay: 150ms;
+      }
+
+      .loading__square--3 {
+        animation-delay: 300ms;
+      }
+
+      .loading__square--4 {
+        animation-delay: 450ms;
+      }
+
+      .loading__text {
+        margin-top: 2rem;
+        font-size: 1.8rem;
+        color: #2dad44;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-2rem);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading">
+      <div class="loading__container">
+        <div class="loading__square loading__square--1"></div>
+        <div class="loading__square loading__square--2"></div>
+        <div class="loading__square loading__square--3"></div>
+        <div class="loading__square loading__square--4"></div>
+      </div>
+      <p class="loading__text">Loading...</p>
+    </div>
+  </body>
+</html>
