@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .background-effect {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+      }
+
+      .circle1,
+      .circle2,
+      .circle3 {
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .circle1 {
+        width: 300px;
+        height: 300px;
+        top: -100px;
+        left: -100px;
+        background-color: rgba(0, 123, 255, 0.6);
+        animation: circle1 6s ease-in-out infinite;
+      }
+
+      .circle2 {
+        width: 200px;
+        height: 200px;
+        top: -50px;
+        right: -50px;
+        background-color: rgba(255, 0, 123, 0.6);
+        animation: circle2 8s ease-in-out infinite;
+      }
+
+      .circle3 {
+        width: 100px;
+        height: 100px;
+        bottom: -50px;
+        left: -50px;
+        background-color: rgba(123, 255, 0, 0.6);
+        animation: circle3 10s ease-in-out infinite;
+      }
+
+      @keyframes circle1 {
+        0% {
+          transform: translate(-200px, -200px) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(800px, 800px) scale(2);
+          opacity: 0;
+        }
+      }
+
+      @keyframes circle2 {
+        0% {
+          transform: translate(-200px, -200px) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(-800px, 800px) scale(2);
+          opacity: 0;
+        }
+      }
+
+      @keyframes circle3 {
+        0% {
+          transform: translate(-100px, -100px) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(800px, -800px) scale(2);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-effect">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+    </div>
+  </body>
+</html>
