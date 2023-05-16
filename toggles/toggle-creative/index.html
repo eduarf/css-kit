@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: #333;
+        }
+        html {
+            font-size: 62.5%;
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+        .checkbox {
+            position: relative;
+            width: 10rem;
+            height: 5rem;
+            background-color: transparent;
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+            border: 5px solid #fff;
+            border-radius: 7.5rem;
+            transition: .3s;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .checkbox::after{
+            content: '';
+            position: absolute;
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 50%;
+            top: .5rem;
+            left: .5rem;
+            background-color: #ed2a65;
+            transition: .3s;
+        }
+        .checkbox-shadow {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 10rem;
+            height: 5rem;
+            z-index: -1;
+            background-color: #222;
+            border-radius: 7.5rem;
+            transition: .3s;
+        }
+        .checkbox:checked::after {
+            left: 5rem;
+            background-color: #f1f1ee;
+        }
+        .checkbox:checked ~ .checkbox-shadow {
+            background-color: #0ace82;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <input type="checkbox" class="checkbox">
+        <div class="checkbox-shadow"></div>
+    </div>
+
+
+</body>
+</html>
