@@ -1,0 +1,72 @@
+/* #scroll-cust::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f3e1e1;
+  border-radius: 5px;
+}
+
+#scroll-cust::-webkit-scrollbar {
+  width: 12px;
+  background-color: #eaeaea;
+}
+
+#scroll-cust::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(122, 153, 217)),
+    color-stop(0.72, rgb(73, 125, 189)),
+    color-stop(0.86, rgb(28, 58, 148))
+  );
+} */
+
+.container {
+  display: grid;
+  place-items: center;
+  min-height: 400px;
+}
+
+.floating-stack {
+  background:rgb(28, 58, 148);
+  color: #fff;
+  height: 18rem;
+  width: 320px;
+  border-radius: 1rem;
+  overflow-y: auto;
+}
+
+.floating-stack > dl {
+  margin: 0 0 1rem;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  align-items: center;
+}
+
+.floating-stack dt {
+  position: sticky;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-weight: 800;
+  background: #ffffff;
+  color: rgb(28,58,148);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  padding: 0.25rem 1rem;
+  grid-column: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.floating-stack dd {
+  grid-column: 2;
+  margin: 0;
+  padding: 0.75rem;
+}
+
+.floating-stack > dl:first-of-type > dd:first-of-type {
+  margin-top: 0.25rem;
+}
