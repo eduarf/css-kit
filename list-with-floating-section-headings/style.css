@@ -20,7 +20,6 @@
     color-stop(0.86, rgb(28, 58, 148))
   );
 } */
-
 .container {
   display: grid;
   place-items: center;
