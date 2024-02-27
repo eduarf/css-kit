@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #483568;
+}
+.navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle {
+  position: relative;
+  width: 8.5rem;
+  height: 8.5rem;
+  background-color: #ff4665;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateY(-3rem);
+  z-index: 10;
+  border: 1rem solid #483568;
+}
+.toggle::before {
+  content: "+";
+  position: absolute;
+  font-size: 5rem;
+  color: #fff;
+  transition: 1s;
+}
+.toggle.active::before {
+  transform: rotate(225deg);
+}
+.menu {
+  width: 6rem;
+  height: 6rem;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 7rem;
+  transform: translateY(-3rem);
+  transition: transform 0.5s, width 0.5s, height, 0.5s;
+  transition-delay: 0.5s, 0.5s, 0.5s;
+}
+.toggle.active ~ .menu {
+  width: 36rem;
+  height: 7rem;
+  transform: translateY(0px);
+  transition-delay: 0s, 0.5s, 0.5s;
+}
+.menu ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 8rem;
+  gap: 3.5rem;
+}
+.menu ul li {
+  list-style-type: none;
+  cursor: pointer;
+  transform: translateY(-3rem);
+  transition: 0.25s;
+  opacity: 0;
+  transition-delay: var(--i);
+}
+.toggle.active ~ .menu ul li {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: calc(0.75s + var(--i));
+}
+.menu ul li:nth-child(3) {
+  width: 3rem;
+  margin-left: 7rem;
+}
+.menu ul li a {
+  display: block;
+  font-size: 35px;
+  text-decoration: none;
+  color: gray;
+}
+.menu li:hover a {
+  color: #ff4665;
+}
